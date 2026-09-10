@@ -118,6 +118,8 @@ edpm_bootstrap_command: |
   rm -f /run/virtlogd.pid
   {%+ endif +%}
   rm -rf repo-setup-main
+  # triple os-net-config retunr code
+  sudo mv /var/lib/tripleo-config /var/lib/edpm-config
 
 edpm_network_config_template: |
   {%- raw %}
